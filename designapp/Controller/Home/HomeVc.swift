@@ -42,13 +42,10 @@ extension HomeVc : UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let objMovieCell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as? MovieCell
-        let post = objPostList[indexPath.row]
+        let objPost = objPostList[indexPath.row]
         
-        //setting title label 
-        objMovieCell?.titleLabel.text = post?.title ?? ""
         
-        //setting body label
-        objMovieCell?.bodyLabel.text = post?.body ?? ""
+        objMovieCell?.setData(post:objPost)
         return objMovieCell!
     }
     
