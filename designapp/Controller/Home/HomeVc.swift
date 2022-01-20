@@ -44,8 +44,34 @@ extension HomeVc : UITableViewDataSource{
         let objMovieCell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as? MovieCell
         let post = objPostList[indexPath.row]
         
+        //setting title label 
         objMovieCell?.titleLabel.text = post?.title ?? ""
+        
+        //setting body label
+        objMovieCell?.bodyLabel.text = post?.body ?? ""
         return objMovieCell!
     }
     
+}
+
+extension HomeVc : UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        print(indexPath.row)
+        
+        //navigate to next screen
+        
+        let objDetailsVc = self.storyboard?.instantiateViewController(identifier: "DetailsVc") as? DetailsVc
+        
+        let post = objPostList[indexPath.row]
+        
+        if let objDetailsVc = objDetailsVc{
+            objDetailsVc.post = post
+            self.navigationController?.pushViewController(objDetailsVc, animated: true)
+        }
+    }
 }

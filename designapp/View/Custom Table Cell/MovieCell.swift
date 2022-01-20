@@ -12,6 +12,8 @@ class MovieCell: UITableViewCell {
     //title label
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var bodyLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +24,14 @@ class MovieCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setData(post:PostModel?){
+        //setting title label
+        titleLabel.text = post?.title ?? ""
+        
+        //setting body label
+        bodyLabel.text = post?.body ?? ""
     }
 
 }

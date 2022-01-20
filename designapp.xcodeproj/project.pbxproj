@@ -23,6 +23,7 @@
 		612DDE4B27980F0200CB560D /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612DDE4A27980F0200CB560D /* Networking.swift */; };
 		612DDE4E2798146200CB560D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612DDE4D2798146200CB560D /* Constant.swift */; };
 		612DDE51279814C000CB560D /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612DDE50279814C000CB560D /* PostModel.swift */; };
+		6193D50627993BEF00DABB35 /* DetailsVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6193D50527993BEF00DABB35 /* DetailsVc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		612DDE4A27980F0200CB560D /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		612DDE4D2798146200CB560D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		612DDE50279814C000CB560D /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		6193D50527993BEF00DABB35 /* DetailsVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,19 +115,15 @@
 		612DDE0A2797CC4C00CB560D /* designapp */ = {
 			isa = PBXGroup;
 			children = (
+				6193D50B27995CC500DABB35 /* Controller */,
+				6193D50927995C1B00DABB35 /* View */,
 				612DDE4F2798149800CB560D /* Model */,
 				612DDE4C2798141100CB560D /* Common */,
 				612DDE4927980EAA00CB560D /* Networking */,
-				612DDE442797EB2200CB560D /* SignUp */,
-				612DDE412797EABA00CB560D /* Login */,
 				612DDE0B2797CC4C00CB560D /* AppDelegate.swift */,
 				612DDE0D2797CC4C00CB560D /* SceneDelegate.swift */,
-				612DDE0F2797CC4C00CB560D /* ViewController.swift */,
-				612DDE112797CC4C00CB560D /* Main.storyboard */,
 				612DDE142797CC4D00CB560D /* Assets.xcassets */,
-				612DDE162797CC4D00CB560D /* LaunchScreen.storyboard */,
 				612DDE192797CC4E00CB560D /* Info.plist */,
-				612DDE3E2797E93400CB560D /* Home */,
 			);
 			path = designapp;
 			sourceTree = "<group>";
@@ -151,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				612DDE3B2797E88C00CB560D /* HomeVc.swift */,
-				612DDE472797EE3A00CB560D /* MovieCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -194,6 +191,52 @@
 				612DDE50279814C000CB560D /* PostModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6193D50727993C1800DABB35 /* DetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				6193D50527993BEF00DABB35 /* DetailsVc.swift */,
+			);
+			path = DetailsVC;
+			sourceTree = "<group>";
+		};
+		6193D50827995C1100DABB35 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				612DDE162797CC4D00CB560D /* LaunchScreen.storyboard */,
+				612DDE112797CC4C00CB560D /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		6193D50927995C1B00DABB35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6193D50A27995C7C00DABB35 /* Custom Table Cell */,
+				6193D50827995C1100DABB35 /* Storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6193D50A27995C7C00DABB35 /* Custom Table Cell */ = {
+			isa = PBXGroup;
+			children = (
+				612DDE472797EE3A00CB560D /* MovieCell.swift */,
+			);
+			path = "Custom Table Cell";
+			sourceTree = "<group>";
+		};
+		6193D50B27995CC500DABB35 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				612DDE0F2797CC4C00CB560D /* ViewController.swift */,
+				612DDE442797EB2200CB560D /* SignUp */,
+				612DDE412797EABA00CB560D /* Login */,
+				6193D50727993C1800DABB35 /* DetailsVC */,
+				612DDE3E2797E93400CB560D /* Home */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +377,7 @@
 				612DDE102797CC4C00CB560D /* ViewController.swift in Sources */,
 				612DDE4B27980F0200CB560D /* Networking.swift in Sources */,
 				612DDE432797EB0200CB560D /* LoginVc.swift in Sources */,
+				6193D50627993BEF00DABB35 /* DetailsVc.swift in Sources */,
 				612DDE3C2797E88C00CB560D /* HomeVc.swift in Sources */,
 				612DDE0C2797CC4C00CB560D /* AppDelegate.swift in Sources */,
 				612DDE0E2797CC4C00CB560D /* SceneDelegate.swift in Sources */,
@@ -517,7 +561,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = designapp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = DesignApp;
+				INFOPLIST_KEY_CFBundleDisplayName = SnipApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -545,7 +589,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = designapp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = DesignApp;
+				INFOPLIST_KEY_CFBundleDisplayName = SnipApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
