@@ -22,7 +22,7 @@ class HomeVc: UIViewController {
             
             self.objPostList = objmodel ?? []
             
-            //referesh the tableview
+            //referesh the tableview 
             DispatchQueue.main.async{
                 self.objTableView.reloadData()
             }
