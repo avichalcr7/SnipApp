@@ -27,5 +27,13 @@ class Networking {
             }
         }.resume()
     }
+    
+    func getUsers(serverUrl:String){
+        
+    }
+    
+    func getUserLikes(forPostId:Int){
+        
+    }
 
 }

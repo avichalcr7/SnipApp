@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol SharedInformationProtocol{
+    func send(data:String)
+}
+
 class DetailsVc: UIViewController {
     
     var post:PostModel?
+    
+    var delegate:SharedInformationProtocol?
     
     @IBOutlet weak var userIdLabel :UILabel!
     @IBOutlet weak var idLabel     :UILabel!
@@ -27,4 +33,7 @@ class DetailsVc: UIViewController {
 
     }
 
+    @IBAction func sendDataAction(_ sender: Any) {
+        delegate?.send(data: "data from details viewcontroller")
+    }
 }

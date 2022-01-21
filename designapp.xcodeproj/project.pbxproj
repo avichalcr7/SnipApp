@@ -23,6 +23,7 @@
 		612DDE4B27980F0200CB560D /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612DDE4A27980F0200CB560D /* Networking.swift */; };
 		612DDE4E2798146200CB560D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612DDE4D2798146200CB560D /* Constant.swift */; };
 		612DDE51279814C000CB560D /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612DDE50279814C000CB560D /* PostModel.swift */; };
+		61694DBB279A76C900862335 /* HomeVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61694DBA279A76C900862335 /* HomeVm.swift */; };
 		6193D50627993BEF00DABB35 /* DetailsVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6193D50527993BEF00DABB35 /* DetailsVc.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		612DDE4A27980F0200CB560D /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		612DDE4D2798146200CB560D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		612DDE50279814C000CB560D /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		61694DBA279A76C900862335 /* HomeVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVm.swift; sourceTree = "<group>"; };
 		6193D50527993BEF00DABB35 /* DetailsVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 		612DDE0A2797CC4C00CB560D /* designapp */ = {
 			isa = PBXGroup;
 			children = (
+				61694DB9279A769400862335 /* HomeVM */,
 				6193D50B27995CC500DABB35 /* Controller */,
 				6193D50927995C1B00DABB35 /* View */,
 				612DDE4F2798149800CB560D /* Model */,
@@ -191,6 +194,14 @@
 				612DDE50279814C000CB560D /* PostModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		61694DB9279A769400862335 /* HomeVM */ = {
+			isa = PBXGroup;
+			children = (
+				61694DBA279A76C900862335 /* HomeVm.swift */,
+			);
+			path = HomeVM;
 			sourceTree = "<group>";
 		};
 		6193D50727993C1800DABB35 /* DetailsVC */ = {
@@ -373,6 +384,7 @@
 				612DDE482797EE3A00CB560D /* MovieCell.swift in Sources */,
 				612DDE51279814C000CB560D /* PostModel.swift in Sources */,
 				612DDE462797EB5400CB560D /* SignupVC.swift in Sources */,
+				61694DBB279A76C900862335 /* HomeVm.swift in Sources */,
 				612DDE4E2798146200CB560D /* Constant.swift in Sources */,
 				612DDE102797CC4C00CB560D /* ViewController.swift in Sources */,
 				612DDE4B27980F0200CB560D /* Networking.swift in Sources */,

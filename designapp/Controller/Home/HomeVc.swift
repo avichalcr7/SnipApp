@@ -7,20 +7,20 @@
 
 import UIKit
 
-class HomeVc: UIViewController {
+class HomeVc: UIViewController, SharedInformationProtocol {
     
-    var objPostList :[PostModel?] = []
+    
+    
+    var objPostList : [PostModel?] = []
 
     @IBOutlet weak var objTableView: UITableView!
+    
+    var viewModel = HomeVm()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //try to fetch data from the server
-        let objNetworking = Networking()
-        //call the getpost method
-        objNetworking.getPostFrom(serverUrl: Server.kPost.rawValue){ objmodel in
-            
-            self.objPostList = objmodel ?? []
+        viewModel.getPost { objmodel in
+            self.objPostList = objmodel
             
             //referesh the tableview 
             DispatchQueue.main.async{
@@ -28,24 +28,22 @@ class HomeVc: UIViewController {
             }
             print("asddf")
         }
-        
-    
-        
     }
-
-} 
+    func send(data: String) {
+        print(data)
+    }
+}
 
 extension HomeVc : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objPostList.count
+        return viewModel.getTotalPost()
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let objMovieCell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as? MovieCell
-        let objPost = objPostList[indexPath.row]
+        let post = indexPath.row
         
-        
-        objMovieCell?.setData(post:objPost)
+        objMovieCell!.setData(row:post, viewModel:viewModel)
         return objMovieCell!
     }
     
@@ -68,6 +66,7 @@ extension HomeVc : UITableViewDelegate{
         
         if let objDetailsVc = objDetailsVc{
             objDetailsVc.post = post
+            objDetailsVc.delegate = self
             self.navigationController?.pushViewController(objDetailsVc, animated: true)
         }
     }
