@@ -24,7 +24,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let myTabbar = myStoryboard.instantiateViewController(identifier: "tabbarcontroller") as? UITabBarController
         if let _ = Utility.shared.fetchUser(), let _ = Utility.shared.fetchPassword() {
             if let tc = myTabbar{
-                window?.rootViewController = tc
+                let objNavControl = UINavigationController(rootViewController: tc)
+                window?.rootViewController = objNavControl
             }
         }
         else{

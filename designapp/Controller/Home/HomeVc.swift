@@ -28,13 +28,11 @@ class HomeVc: UIViewController, SharedInformationProtocol {
             }
             print("asddf")
         }
-        
-        self.navigationController?.navigationBar.isHidden = true
     }
     func send(data: String) {
         print(data)
     }
-}
+} 
 
 extension HomeVc : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
