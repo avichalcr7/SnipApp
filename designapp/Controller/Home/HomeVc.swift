@@ -28,6 +28,8 @@ class HomeVc: UIViewController, SharedInformationProtocol {
             }
             print("asddf")
         }
+        
+        self.navigationController?.navigationBar.isHidden = true
     }
     func send(data: String) {
         print(data)
