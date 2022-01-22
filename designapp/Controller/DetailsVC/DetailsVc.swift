@@ -22,7 +22,7 @@ class DetailsVc: UIViewController {
     @IBOutlet weak var titleLabel  :UILabel!
     @IBOutlet weak var bodyLabel   :UILabel!
 
-    override func viewDidLoad() {
+    override func viewDidLoad() { 
         super.viewDidLoad()
         
         //setting the data
