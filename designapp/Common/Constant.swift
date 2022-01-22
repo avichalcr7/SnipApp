@@ -11,3 +11,7 @@ enum Server: String {
     case kPost = "https://jsonplaceholder.typicode.com/posts"
 
 }
+enum MESSAGE : String{
+    case WRONG_CREDENTIAL = "CHECK USERNAME/PASSWORD"
+    case SUCCESS = "Log in Succes"
+}

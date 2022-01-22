@@ -41,6 +41,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
                                 <connections>
+                                    <action selector="login:" destination="v6Y-Il-CCy" eventType="touchUpInside" id="b10-NZ-rHr"/>
                                     <segue destination="OUC-le-2A0" kind="push" id="Qc4-6Q-mQz"/>
                                 </connections>
                             </button>
@@ -50,6 +51,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="eSg-xa-Wr6"/>
                     <navigationItem key="navigationItem" id="CsA-k0-CZj"/>
+                    <connections>
+                        <outlet property="passwordTF" destination="Aas-BO-mYi" id="8Pn-CJ-Z92"/>
+                        <outlet property="userTF" destination="eiV-PL-grb" id="oTZ-JF-U5n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S5t-6S-xno" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -224,7 +229,7 @@
         <!--User Post-->
         <scene sceneID="8HK-Za-gcB">
             <objects>
-                <tabBarController id="OUC-le-2A0" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabbarcontroller" id="OUC-le-2A0" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="User Post" id="JB0-PE-yxB"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="82y-kW-HI4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
